@@ -1,0 +1,182 @@
+/*Файлы со шрифтами*/
+.opn-thin {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+}
+
+.opn-reg {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+}
+
+.opn-bold {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+}
+/*Основные цвета*/
+@base-black: #706b73;
+@base-red: #fc7254;
+@white: #fff;
+@base-text: #6e6e6e;
+@bg-gray: #f5f5f5;
+
+
+body {
+	font-size: 14px;
+	.opn-reg;
+	color: @base-text;
+}
+
+
+input, button, textarea {
+	&:focus {
+	outline: none; // Отменяет подсветку окон и кнопок при выделении
+	}
+}
+
+header {
+	background-color: @bg-gray;
+	min-height: 750px;
+	height: 100vh;
+}
+
+.main { 
+	&-head {
+		margin-top: 3%;
+	}
+	&-logo-border {
+		text-align: center;
+		width: 155px;
+		height: 55px;
+		border: 3px solid @base-black;
+		line-height: 45px;
+		p {
+			.opn-bold;
+			font-size: 40px;
+			color: @base-black;
+			span {
+			color: lighten(@base-red, 5%);
+			}
+		}
+	}
+
+	&-text {
+		margin-top: 2%;
+		text-align: center;
+		h1 {
+			font-size: 50px;
+			.opn-bold;
+			span {
+				color: @base-red;
+			}
+		}
+		p {
+			font-size: 16px;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+
+	&-navbar {
+		// text-align: center;
+		width: 55px;
+		position: relative;
+		float: right;
+		height: 50px;
+		// margin-top: 15px;
+	}
+	&-form {
+		margin-top: 7%;
+		padding: 20px 35px;
+		background-color: @white;
+		-webkit-box-shadow: 0px 0px 57px 0px rgba(20, 20, 21, 0.2);;
+		box-shadow: 0px 0px 57px 0px rgba(20, 20, 21, 0.2);;
+		-webkit-border-radius: 2px;
+		-moz-border-radius: 2px;
+		-ms-border-radius: 2px;
+		-o-border-radius: 2px;
+		border-radius: 2px;
+		&-header {
+			text-align: center;
+			font-size: 20px;
+			line-height: 50px;
+			.opn-thin;
+			span {
+				color: @base-red;
+			}
+		}
+		&-btn {
+			background-color: @base-red;
+			border: none;
+			padding: 15px 35px;
+			color: @white;
+			font-size: 16px;
+			display:block;
+			margin: 0 auto; //m0-auto - сверху и снизу марджин 0, по сторонам - автоматическое выравнивание по центру. Это подходит только для элементов, которые имеют пареметр display:block; Это позволяет выровнять элемент по центру, если он не текстовы. Для задания отсутупов снизу-сверху, просто отдельно затем прописываем
+			margin-top: 20px;
+
+			-webkit-border-radius: 50px;
+			-moz-border-radius: 50px;
+			-ms-border-radius: 50px;
+			-o-border-radius: 50px;
+			border-radius: 50px;
+		}
+		input, textarea {
+			width: 100%;
+			border: none;
+			border-bottom: 1px solid lighten(@base-text, 40%);
+			margin-top: 35px;
+			font-size: 15px;
+		}
+	}
+}	
+		// Кнопка рскрытия всплывающего меню
+.line {
+	width: 30px;
+	height: 4px;
+	background-color: @base-black;
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	-webkit-1: translateY(0px);
+	-ms-transform: translateY(0px);
+	-o-transform: translateY(0px);
+	transform: translateY(0px);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;	
+	&:before, &:after {
+		background-color: @base-black;
+		display: inline-block;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		content: '';
+		width: 30px;
+		height: 4px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-ms-border-radius: 5px;
+		-o-border-radius: 5px;
+		border-radius: 5px;	
+	}
+	&:before {
+		--webkit-transform: translateY(-8px);
+		-ms-transform: translateY(-8px);
+		-o-transform: translateY(-8px);
+		transform: translateY(-8px);
+		}
+	&:after {
+		--webkit-transform: translateY(4px);
+		-ms-transform: translateY(4px);
+		-o-transform: translateY(4px);
+		transform: translateY(4px);
+	}
+}
+
+	
+	
+
