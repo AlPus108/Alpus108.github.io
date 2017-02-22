@@ -1,0 +1,310 @@
+@import "elements.less";
+
+/*Файлы со шрифтами*/
+.opn-thin {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+}
+
+.opn-reg {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+}
+
+.opn-bold {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+}
+/*Основные цвета*/
+@base-black: #706b73;
+@base-red: #fc7254;
+@white: #fff;
+@base-text: #6e6e6e;
+@bg-gray: #f5f5f5;
+@bg-tomi: #4eb2f7;
+@bg-koimona: #c049f8;
+@bg-koire: #817eff;
+@bg-lara: #f74770;
+
+
+/*Базовые настройки*/
+
+body {
+	font-size: 14px;
+	.opn-reg;
+	color: @base-text;
+}
+
+
+input, button, textarea {
+	&:focus {
+	outline: none; // Отменяет подсветку окон и кнопок при выделении
+	}
+}
+
+/* Настройки для всех секций */
+section {
+	padding-top: 10%;
+	padding-bottom: 10%;
+}
+
+.section-header {
+	margin-bottom: 7%;
+	h2 {
+		font-size: 50px;
+		.opn-bold;
+		span {
+			color: @base-red;
+		}
+	}
+	p {
+		font-size: 16px;
+	}
+}
+
+/*Главный экран*/
+header {
+	background: @bg-gray url(../img/bg-lesson_13.jpg) no-repeat center center;
+	background-size: cover; // Фон заполняет все пространство шапки
+	min-height: 750px;
+	height: 100vh;
+}
+
+.main { 
+	&-head {
+		margin-top: 3%;
+	}
+	&-logo-border {
+		text-align: center;
+		width: 155px;
+		height: 55px;
+		border: 3px solid @base-black;
+		line-height: 45px;
+		p {
+			.opn-bold;
+			font-size: 40px;
+			color: @base-black;
+			span {
+			color: lighten(@base-red, 5%);
+			}
+		}
+	}
+
+	&-text {
+		margin-top: 2%;
+		text-align: center;
+		h1 {
+			font-size: 50px;
+			.opn-bold;
+			span {
+				color: @base-red;
+			}
+		}
+		p {
+			font-size: 16px;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+
+	&-navbar {
+		// text-align: center;
+		width: 55px;
+		position: relative;
+		float: right;
+		height: 50px;
+		// margin-top: 15px;
+	}
+	&-form {
+		margin-top: 7%;
+		padding: 20px 35px;
+		background-color: @white;
+		/*Тень объекта на фоне (-bxsh)*/
+		-webkit-box-shadow: 0px 0px 57px 0px rgba(20, 20, 21, 0.2);; 
+		box-shadow: 0px 0px 57px 0px rgba(20, 20, 21, 0.2);
+		-webkit-border-radius: 2px;
+		-moz-border-radius: 2px;
+		-ms-border-radius: 2px;
+		-o-border-radius: 2px;
+		border-radius: 2px;
+		&-header {
+			text-align: center;
+			font-size: 20px;
+			line-height: 50px;
+			.opn-reg;
+			span {
+				color: @base-red;
+			}
+		}
+		&-btn {
+			background-color: @base-red;
+			border: none;
+			padding: 15px 35px;
+			color: @white;
+			font-size: 16px;
+			display:block;
+			margin: 0 auto; //m0-auto - сверху и снизу марджин 0, по сторонам - автоматическое выравнивание по центру. Это подходит только для элементов, которые имеют пареметр display:block; Это позволяет выровнять элемент по центру, если он не текстовы. Для задания отсутупов снизу-сверху, просто отдельно затем прописываем
+			margin-top: 20px;
+
+			-webkit-border-radius: 50px;
+			-moz-border-radius: 50px;
+			-ms-border-radius: 50px;
+			-o-border-radius: 50px;
+			border-radius: 50px;
+		}
+		input, textarea {
+			width: 100%;
+			border: none;
+			border-bottom: 1px solid lighten(@base-text, 40%);
+			margin-top: 35px;
+			font-size: 15px;
+		}
+	}
+}	
+		// Кнопка рскрытия всплывающего меню "Гамбургер"
+.line {
+	width: 30px;
+	height: 4px;
+	background-color: @base-black;
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	-webkit-1: translateY(0px);
+	-ms-transform: translateY(0px);
+	-o-transform: translateY(0px);
+	transform: translateY(0px);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;	
+	&:before, &:after {
+		background-color: @base-black;
+		display: inline-block;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		content: '';
+		width: 30px;
+		height: 4px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-ms-border-radius: 5px;
+		-o-border-radius: 5px;
+		border-radius: 5px;	
+	}
+	&:before {
+		--webkit-transform: translateY(-8px);
+		-ms-transform: translateY(-8px);
+		-o-transform: translateY(-8px);
+		transform: translateY(-8px);
+		}
+	&:after {
+		--webkit-transform: translateY(4px);
+		-ms-transform: translateY(4px);
+		-o-transform: translateY(4px);
+		transform: translateY(4px);
+	}
+}
+
+/* Section Process */
+
+.process {
+	&-box {
+		color: @white;
+		text-align: center;
+		padding: 50px 30px;
+		i.fa {
+			font-size: 50px;
+		}
+		h4 {
+			margin-top: 20px;
+			font-size: 20px;
+			.opn-bold;
+		}
+		p {
+			margin-top: 30px;
+			font-size: 15px;
+		}
+	}
+	&-btn { /*Кнопка формы*/
+		position: absolute; /* для того, чтобы он смог выйти за пределы РЭ*/
+		/*left: 50%;*/
+		margin-left: -117px;
+		margin-top: 22px;
+		/*bottom: -50;*/
+		border: none; /*Убираем гаринцы кнопки (bd-n)*/
+		color: @base-black; /*Меняем цвет кнопки на черный*/
+		padding: 15px 45px; /*Стандартные пендинги для кнопок (p15-35)*/
+		width: 80%; /*Ширина копки - 100% от ширины РЭ. Внутренние пэндинги РЭ не дают ней занять все пространство. - это было до absolute */
+		-webkit-border-radius: 50px;
+		-moz-border-radius: 50px;
+		-ms-border-radius: 50px;
+		-o-border-radius: 50px;
+		border-radius: 50px;
+		/*Радиус скругления рамки (-brs)*/
+		background-color: @white;
+		font-size: 16px;
+		/*Тень на фоне (-bxsh)*/
+		-webkit-box-shadow: 0px 0px 20px 0px rgba(20, 20, 21, 0.05);
+		box-shadow: 0px 0px 20px 0px rgba(20, 20, 21, 0.05);
+	}	
+}
+
+.btn-plus { /* Знак "+" на кнопке */
+	/*горизонтальная черта*/
+	width: 16px;
+	height: 2px;
+	margin-right: 20px; /* отодвигаем его от кнопки (mr5) */
+	display: inline-block; /*делаем его строчно-блочным*/
+	background-color: @base-black;
+	vertical-align: middle;
+	/* vertical-align - выравнивание двух блочных элементов между собой:
+	- middle - выравнивание посередине (va-m)
+	- top - один сверху, другой посередине (va-t)
+	- text-top - выравнивание текста по высоте и тд. */
+	&:before {
+		/*вертикальная черта*/
+		display: inline-block;
+		content: "";
+		width: 16px;
+		height: 2px;
+		background-color: @base-black;
+		position: absolute;
+		-webkit-transform: rotate(90deg) translateY(8px);
+		-ms-transform: rotate(90deg) translateY(8px);
+		-o-transform: rotate(90deg) translateY(8px);
+		transform: rotate(90deg) translateY(8px);
+		/*Применяем перемещение по поси Y, так как объект овернут на 90гр*/
+
+	}
+}
+
+.box {
+	&-tomi {
+		background-color: @bg-tomi;
+	}
+	&-koimona {
+		background-color: @bg-koimona;
+	}
+	&-koire {
+		background-color: @bg-koire;
+	}
+	&-lara {
+		background-color: @bg-lara;
+	}
+}
+
+i.fa-camera-retro {
+	/* Сокращенная формула для transform с префиксами: -rtf 
+	Для поворота - rotate, "-" - против часовой стрелки*/
+	-webkit-transform: rotate(-20deg);
+	-ms-transform: rotate(-20deg);
+	-o-transform: rotate(-20deg);
+	transform: rotate(-20deg);
+}
+
+	
+	
+
