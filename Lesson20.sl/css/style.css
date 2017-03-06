@@ -1,0 +1,1017 @@
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
+/*Файлы со шрифтами*/
+/* line 4, style.less */
+.opn-thin {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+/* line 9, style.less */
+.opn-reg {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+/* line 14, style.less */
+.opn-bold {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+/*Основные цвета*/
+/*Базовые настройки*/
+/* line 36, style.less */
+body {
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: #6e6e6e;
+  background-color: #fff;
+}
+/* line 45, style.less */
+input:focus,
+button:focus,
+textarea:focus {
+  outline: none;
+}
+/* Настройки для всех секций */
+/* line 51, style.less */
+section {
+  padding-top: 10%;
+  padding-bottom: 5%;
+}
+/* line 56, style.less */
+.section-header {
+  margin-bottom: 7%;
+}
+/* line 58, style.less */
+.section-header h2 {
+  font-size: 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+/* line 61, style.less */
+.section-header h2 span {
+  color: #fc7254;
+}
+/* line 65, style.less */
+.section-header p {
+  font-size: 16px;
+}
+/*Главный экран*/
+/* line 71, style.less */
+header {
+  background: #f5f5f5 url(../img/bg-lesson_13.jpg) no-repeat center center;
+  background-size: cover;
+  min-height: 750px;
+  height: 100vh;
+}
+/* line 79, style.less */
+.main-head {
+  margin-top: 3%;
+}
+/* line 82, style.less */
+.main-logo-border {
+  text-align: center;
+  width: 155px;
+  height: 55px;
+  border: 3px solid #706b73;
+  line-height: 45px;
+}
+/* line 88, style.less */
+.main-logo-border p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  color: #706b73;
+}
+/* line 92, style.less */
+.main-logo-border p span {
+  color: #fc876d;
+}
+/* line 98, style.less */
+.main-text {
+  margin-top: 2%;
+  text-align: center;
+}
+/* line 101, style.less */
+.main-text h1 {
+  font-size: 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+/* line 104, style.less */
+.main-text h1 span {
+  color: #fc7254;
+}
+/* line 108, style.less */
+.main-text p {
+  font-size: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 115, style.less */
+.main-navbar {
+  width: 55px;
+  position: relative;
+  float: right;
+  height: 50px;
+}
+/* line 123, style.less */
+.main-form {
+  margin-top: 7%;
+  padding: 20px 35px;
+  background-color: #ffffff;
+  /*Тень объекта на фоне (-bxsh)*/
+  box-shadow: 0px 0px 57px 0px rgba(20, 20, 21, 0.2);
+  -o-border-radius: 2px;
+  border-radius: 2px;
+}
+/* line 135, style.less */
+.main-form-header {
+  text-align: center;
+  font-size: 20px;
+  line-height: 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+/* line 140, style.less */
+.main-form-header span {
+  color: #fc7254;
+}
+/* line 144, style.less */
+.main-form-btn {
+  background-color: #fc7254;
+  border: none;
+  padding: 15px 35px;
+  color: #ffffff;
+  font-size: 16px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  -o-border-radius: 50px;
+  border-radius: 50px;
+}
+/* line 159, style.less */
+.main-form-btn span {
+  /* Стрелка на кнопке */
+  font-size: 15px;
+}
+/* line 162, style.less */
+.main-form-btn:hover {
+  /* Появление тени при наведении */
+  box-shadow: 0px 0px 20px 0px rgba(20, 20, 21, 0.21);
+}
+/* line 167, style.less */
+.main-form input,
+.main-form textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #d4d4d4;
+  margin-top: 35px;
+}
+/* line 177, style.less */
+.line {
+  width: 30px;
+  height: 4px;
+  background-color: #706b73;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-1: translateY(0px);
+  -ms-transform: translateY(0px);
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 194, style.less */
+.line:before,
+.line:after {
+  background-color: #706b73;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  content: '';
+  width: 30px;
+  height: 4px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 209, style.less */
+.line:before {
+  --webkit-transform: translateY(-8px);
+  -ms-transform: translateY(-8px);
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+}
+/* line 215, style.less */
+.line:after {
+  --webkit-transform: translateY(4px);
+  -ms-transform: translateY(4px);
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+}
+/* Section Process */
+/* line 226, style.less */
+.process-box {
+  color: #ffffff;
+  text-align: center;
+  padding: 50px 30px;
+}
+/* line 230, style.less */
+.process-box i.fa {
+  font-size: 50px;
+}
+/* line 233, style.less */
+.process-box h4 {
+  margin-top: 20px;
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+/* line 238, style.less */
+.process-box p {
+  margin-top: 30px;
+  font-size: 15px;
+}
+/* line 242, style.less */
+.process-box:hover {
+  /* Появление тени при наведении */
+  box-shadow: 0px 0px 20px 0px rgba(20, 20, 21, 0.21);
+}
+/* line 247, style.less */
+.process-btn {
+  /*Кнопка формы*/
+  position: absolute;
+  /* для того, чтобы он смог выйти за пределы РЭ*/
+  /*left: 50%;*/
+  margin-left: -40%;
+  margin-top: 22px;
+  bottom: -50;
+  border: none;
+  /*Убираем гаринцы кнопки (bd-n)*/
+  color: #706b73;
+  /*Меняем цвет кнопки на черный*/
+  padding: 15px 30px;
+  /*Стандартные пендинги для кнопок (p15-35)*/
+  width: 80%;
+  /*Ширина копки - 100% от ширины РЭ. Внутренние пэндинги РЭ не дают ей занять все пространство. - это было до absolute */
+  -o-border-radius: 50px;
+  border-radius: 50px;
+  /*Радиус скругления рамки (-brs)*/
+  background-color: #ffffff;
+  font-size: 16px
+  /*Тень на фоне (-bxsh)*/
+}
+/* line 266, style.less */
+.process-btn:hover {
+  /* Появление тени при наведении */
+  box-shadow: 0px 0px 20px 0px rgba(20, 20, 21, 0.21);
+}
+/* line 273, style.less */
+.btn-plus {
+  /* Знак "+" на кнопке */
+  /*горизонтальная черта*/
+  width: 16px;
+  height: 2px;
+  margin-right: 20px;
+  /* отодвигаем его от кнопки (mr5) */
+  display: inline-block;
+  /*делаем его строчно-блочным*/
+  background-color: #706b73;
+  vertical-align: middle
+  /* vertical-align - выравнивание двух блочных элементов между собой:
+	- middle - выравнивание посередине (va-m)
+	- top - один сверху, другой посередине (va-t)
+	- text-top - выравнивание текста по высоте и тд. */
+}
+/* line 285, style.less */
+.btn-plus:before {
+  /*вертикальная черта*/
+  display: inline-block;
+  content: "";
+  width: 16px;
+  height: 2px;
+  background-color: #706b73;
+  position: absolute;
+  -webkit-transform: rotate(90deg) translateY(8px);
+  -ms-transform: rotate(90deg) translateY(8px);
+  transform: rotate(90deg) translateY(8px)
+  /*Применяем перемещение по поси Y, так как объект овернут на 90гр*/
+}
+/* line 303, style.less */
+.box-tomi {
+  background-color: #4eb2f7;
+}
+/* line 306, style.less */
+.box-koimona {
+  background-color: #c049f8;
+}
+/* line 309, style.less */
+.box-koire {
+  background-color: #817eff;
+}
+/* line 312, style.less */
+.box-lara {
+  background-color: #f74770;
+}
+/* line 317, style.less */
+i.fa-camera-retro {
+  /* Сокращенная формула для transform с префиксами: -rtf 
+	Для поворота - rotate, "-" - против часовой стрелки*/
+  -webkit-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+}
+/* Works section */
+/* line 327, style.less */
+.works-box {
+  height: 360px;
+  position: relative
+  /* (ps-r)  relative для того, чтобы элементы, которые имеют position: absolute внутри works-box, выравнивались относительно works-box, а не других элементов, которые имеют position:relative. */
+}
+/* line 330, style.less */
+.works-box img {
+  width: 100%;
+}
+/* line 334, style.less */
+.signature {
+  opacity: 0;
+  /* нерпозрачность. шкала 0-1. 0.25 - 25% */
+  position: absolute;
+  /* Делаем "абсолют", чтобы выравнивание подписи было отностительно РЭ*/
+  /*Далее прилепляем к левому верхнему краю РЭ*/
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  /* Ширина 100% от РЭ*/
+  height: 100%;
+  /* Высота 100% от РЭ*/
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Заливка - Черный цвет с прозачностью 50% - эффект при наведении*/
+  color: #ffffff;
+  /*Цвет текста в блоке*/
+  text-align: center;
+  /* Делаем флекс-бокс для выравнивания элементов в блоке. (d--f) Удаляем лишние префиксы moz ms o  */
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* Выравниваем все по центру горизонтали */
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* Выравниваем все по центру вертикали */
+  /* Далее делаем выравнивение для -webkit- но уже руками. Копируем и подставляем */
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+  /* Теперь наш контент будет всегда ровно посередине. */
+  /* Далее делаем смену непрозрачности более плавной с помощью transition (-trs)*/
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s
+  /* 0.5 - скрость изменения прозрачности для opasiti. all - для всех элементов. Допустим, если бы что-то менялось (высота, ширина). */
+}
+/* line 360, style.less */
+.signature:hover {
+  /* Это псевдо-класс hover */
+  opacity: 1
+  /* делаем элемент прозрачным */
+}
+/* line 365, style.less */
+.sign {
+  /* Далее, наша задача - сделать так, чтобы подпись появлялась при наведении. */
+}
+/* line 366, style.less */
+.sign p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+}
+/* line 370, style.less */
+.sign button {
+  border: none;
+  padding: 15px 35px;
+  /* Радиус скругления рамки (-brs) */
+  -o-border-radius: 50px;
+  border-radius: 50px;
+  background-color: #fc7254;
+}
+/* line 384, style.less */
+.works-row {
+  margin-top: 3%;
+}
+/* Services section Блок с ветикальными иконками */
+/* line 393, style.less */
+.services-list {
+  text-align: center;
+  list-style: none
+  /* (lsn) Отменяет маркировку списка */
+}
+/* line 396, style.less */
+.services-list-item {
+  display: inline-block;
+  /* (dpb) Элементы в списке будут блочными и будут занимать всю строку, таким образом становиться друг под другом образуя колонку. 
+			Далее делаем квадрат. */
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  /* Здесь иконки выравниваем по центру их блока. img является строчным элементом и он будет вести себя как текст. */
+  padding-top: 25px;
+  padding-left: 18px;
+  margin: 5px 5px;
+  /* (mg5-a) сам блок с иконками также выравниваем по центру - сверху и снизу по 5рх, по краям - автомат. */
+  background-color: #fbfbfb;
+}
+/* line 406, style.less */
+.services-list-item:hover {
+  /* Появление тени при наведении */
+  box-shadow: 0px 0px 20px 0px rgba(20, 20, 21, 0.21);
+}
+/* line 414, style.less */
+.services-info h4 {
+  font-size: 30px;
+}
+/* line 417, style.less */
+.services-info p {
+  font-size: 16px;
+}
+/* line 421, style.less */
+.services-line {
+  margin-top: 10px;
+  width: 60px;
+  height: 4px;
+  background-color: #fc7254;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+/* line 429, style.less */
+.services-btn {
+  margin-top: 22px;
+  border: 1px solid #bcb9be;
+  color: #706b73;
+  /*Меняем цвет кнопки на черный*/
+  padding: 15px 45px;
+  /*Стандартные пендинги для кнопок (p15-35)*/
+  -o-border-radius: 50px;
+  border-radius: 50px;
+  /*Радиус скругления рамки (-brs)*/
+  background-color: #ffffff;
+  font-size: 16px
+  /*Тень на фоне (-bxsh)*/
+}
+/* line 443, style.less */
+.services-btn:hover {
+  /* Появление тени при наведении */
+  box-shadow: 0px 0px 20px 0px rgba(20, 20, 21, 0.21);
+}
+/* line 451, style.less */
+.panel-default > .panel-heading h4 {
+  color: #fc7254;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+/* Секция отзывов */
+/* line 460, style.less */
+.feetback {
+  /* Кнопки слайдера */
+}
+/* line 461, style.less */
+.feetback-box {
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 10px
+  /* img {
+			width: 128px;
+			height: 128px;
+			/* Делаем аватарку круглой (-brs50%) Радиус скругления углов рамки*/
+  /*-webkit-border-radius: 50%;
+			-moz-border-radius: 50%;
+			-ms-border-radius: 50%;
+			-o-border-radius: 50%;
+			border-radius: 50%;
+		}
+	
+	Или через стандартный класс Bootstrap img-circle. Просто прописываем этот класс объету */
+}
+/* line 477, style.less */
+.feetback-box p {
+  font-size: 17px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+/* line 483, style.less */
+.feetback-box p span {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+/* line 487, style.less */
+.feetback-box i.fa-star {
+  color: #ffef3b;
+}
+/* line 492, style.less */
+.feetback-img {
+  margin-bottom: -64px;
+}
+/* line 496, style.less */
+.feetback-shadow {
+  padding: 64px;
+  box-shadow: 0px 0px 27px 0px rgba(20, 20, 21, 0.07);
+}
+/* line 501, style.less */
+.feetback-slider-arrows {
+  position: absolute;
+  top: 50%;
+  /* для стрелок слайдера отступ сверху на 50% от РЭ */
+  height: 57px;
+  width: 57px;
+  font-size: 20px;
+  z-index: 1;
+  /* применяется, если один элемент закрывает другой. Они стоят на разных слоях и перекрывают друг друга.  В данном случае, левая стрелка не работала по этой причине. 999 - выстскиваем элемент на верх. -999 - опускаем его на нижний слой. */
+  /* возвращаем вверх на половину их высоты */
+  -webkit-transform: translateY -9px;
+  -ms-transform: translateY -9px;
+  transform: translateY -9px;
+  box-shadow: 0px 3px 14px 0px rgba(20, 20, 21, 0.28);
+  padding: 20px;
+  -o-border-radius: 50px;
+  border-radius: 50px;
+  background-color: #ffffff
+  /* Оформляем кнопки слайдера "при наведении" */
+}
+/* line 522, style.less */
+.feetback-slider-arrows:hover {
+  background-color: #fc7254;
+  color: #ffffff;
+  cursor: pointer
+  /* при наведении курсор превращается в руку */
+}
+/* line 530, style.less */
+.slick-active {
+  outline: none;
+}
+/* Нашли в панели разработчика элемент, отвечаютщи за обводку блока. Отменяем обводку */
+/* line 535, style.less */
+.arrow-left {
+  left: 0;
+}
+/* line 539, style.less */
+.arrow-right {
+  right: 0;
+  padding-left: 25px;
+}
+/* Точки прокрутки снизу слайдера */
+/* line 544, style.less */
+.slick-dots li button:before {
+  width: 21px;
+  height: 7px;
+  color: transparent;
+  margin-top: 40px;
+  background-color: #adadad;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+}
+/* line 557, style.less */
+.slick-dots li.slick-active button:before {
+  color: transparent;
+  background-color: #fc7254;
+}
+/* line 562, style.less */
+.slick-dots {
+  bottom: -50;
+}
+/* Feedback-section Слайдер Bootstrep*/
+/* line 569, style.less */
+.fb-img {
+  display: block;
+  margin: 0 auto;
+}
+/* line 576, style.less */
+.h3-bootstrap {
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+/* line 579, style.less */
+.h3-bootstrap span {
+  color: #fc7254;
+}
+/* line 584, style.less */
+.h3-Photorama {
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+/* line 587, style.less */
+.h3-Photorama span {
+  color: #fc7254;
+}
+/* line 592, style.less */
+.carousel-control.right,
+.carousel-control.left {
+  color: #fc7254;
+  /* Цвет стрелок. Они шрифтовые, поэтому можно задать цвет. Они слегка прозачны, а при наведении становятся четкими.*/
+  opacity: 1;
+  /* Убираем непрозрачность. Стрелки всегда четкие. */
+  background: none;
+  z-index: 1;
+}
+/* line 599, style.less */
+.carousel-indicators .active {
+  background-color: #fc7254
+  /* цвет индикаторов перелистывания */
+}
+/* Footer */
+/* line 606, style.less */
+footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #f7f7f7;
+}
+/* line 613, style.less */
+.footer-btn {
+  background-color: #ffffff;
+  color: #706b73;
+  font-size: 16px;
+  border: none;
+  padding: 15px 80px;
+  -o-border-radius: 50px;
+  border-radius: 50px;
+}
+/* line 624, style.less */
+.footer-btn:hover {
+  box-shadow: 0px 11px 20px 0px rgba(20, 20, 21, 0.07);
+}
+/* Modals / Всплывающие окна */
+/* Модальное (всплывающее) окно без JavaScript */
+/* line 634, style.less */
+.popup {
+  width: 400px;
+  height: 400px;
+  background-color: #ffffff;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  margin-left: -200px
+  /* Отодвигаем на половину его ширины, чтобы разместить по центур экрана */
+}
+/* line 642, style.less */
+.popup-overlay {
+  display: none;
+  /* (d-n) По умолчанию его не будет видно */
+  opacity: 0;
+  /* скрываем это окно */
+  position: fixed;
+  /* Фиксируем затемненную подложку (pf) */
+  width: 100%;
+  height: 100vh;
+  /* Высота на всю высоту экрана */
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Цвет черный с прозрачностью 0.5 */
+  /* Привязываем к верху и к левому краю экрана */
+  top: 0;
+  left: 0;
+  z-index: 99
+  /* Вытаскиваем его на верхный слой поверх остальнрых элементов */
+  /* Когда мы обращаемся к диву с id="popup-1", это его состояние в режиме target, поэтому для overlay мы накладываем  псевдо-класс target*/
+}
+/* line 655, style.less */
+.popup-overlay:target {
+  /* Работает не во всех браузерах */
+  display: block;
+  opacity: 1;
+}
+/* line 661, style.less */
+.popup-close {
+  /* Оформляем крестик зкрытия окна popup */
+  font-size: 30px;
+  color: #706b73;
+  /* Задаем позицию absolute и привязываем к правому верхнему углу */
+  position: absolute;
+  /* ps-a */
+  top: -35px;
+  right: -20px
+  /* Для модильных версий положение крестика
+		top: 0px;
+		right: 10px;
+		*/
+  /* Далее перечисляем все псевдоклассы, когда мы на ссылку наводим, кликаем, посетили и когда она активна */
+}
+/* line 673, style.less */
+.popup-close:hover,
+.popup-close:focus,
+.popup-close:visited,
+.popup-close:active {
+  /* Во всех этих состояниях убираем у крестика значек подчеркивания, так как это ссылка */
+  text-decoration: none;
+  /* td */
+  color: #706b73;
+}
+/* line 678, style.less */
+.popup-close:hover {
+  opacity: .7
+  /* (op.7) При наведении на кнопку ее непрозрачность уменьшается */
+}
+/* Всплывающее окно на SVG-графике */
+/* line 690, style.less */
+svg {
+  max-width: 100%;
+}
+/* -------------------------------- 
+
+Modal Window
+
+-------------------------------- */
+/* line 699, style.less */
+.cd-modal {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+  -webkit-transition: visibility 0s 0.6s;
+  transition: visibility 0s 0.6s;
+  z-index: 99;
+}
+/* line 712, style.less */
+.cd-modal svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 717, style.less */
+.cd-modal svg > path {
+  fill: #1f4c74;
+}
+/* line 720, style.less */
+.cd-modal .modal-close {
+  /* 'X' icon */
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  right: 5%;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3) url(../img/cd-icon-close.svg) no-repeat center center;
+  /* image replacement */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  /* Force hardware acceleration*/
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: -webkit-transform 0.3s 0s, visibility 0s 0.3s, opacity 0.3s 0s;
+  transition: transform 0.3s 0s, visibility 0s 0.3s, opacity 0.3s 0s;
+}
+/* line 753, style.less */
+.no-touch .cd-modal .modal-close:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* line 756, style.less */
+.cd-modal.modal-is-visible {
+  visibility: visible;
+  -webkit-transition: visibility 0s 0s;
+  transition: visibility 0s 0s;
+}
+/* line 762, style.less */
+.cd-modal.modal-is-visible .modal-close {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: -webkit-transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s;
+  transition: transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+/* line 775, style.less */
+.cd-modal-content {
+  position: relative;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 3em 5% 4em;
+  opacity: 0;
+  -webkit-transform: translateY(50px);
+  -ms-transform: translateY(50px);
+  transform: translateY(50px);
+  -webkit-transition: opacity 0.3s 0s, -webkit-transform 0.3s 0s;
+  transition: opacity 0.3s 0s, transform 0.3s 0s;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* line 792, style.less */
+.cd-modal-content p {
+  color: #f2f2f2;
+  line-height: 1.6;
+  margin: 2em 0;
+}
+/* line 797, style.less */
+.modal-is-visible .cd-modal-content {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-overflow-scrolling: touch;
+  -webkit-transition: opacity 0.3s 0.3s, -webkit-transform 0.3s 0.3s;
+  transition: opacity 0.3s 0.3s, transform 0.3s 0.3s;
+}
+@media only screen and (min-width: 768px) {
+  /* line 810, style.less */
+  .cd-modal-content {
+    padding: 3em 10% 4em;
+  }
+  /* line 813, style.less */
+  .cd-modal-content p {
+    font-size: 2.4rem;
+  }
+}
+/* -------------------------------- 
+	Стили всплывающего окна (подправлять здесь)
+ Cover Layer - hide main content when modal is fired
+
+-------------------------------- */
+/* line 823, style.less */
+.cd-cover-layer {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #f2f2f2;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s 0.3s, visibility 0s 0.6s;
+  transition: opacity 0.3s 0.3s, visibility 0s 0.6s;
+}
+/* line 837, style.less */
+.cd-cover-layer.modal-is-visible {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
+  /* -trs */
+  transition: opacity 0.3s 0s, visibility 0s 0s;
+}
+/* Анимация */
+/* line 848, style.less */
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  -webkit-animation-name: move;
+  /* (-an) Имя анимации пробелами не заделять. Лучше слитно или через нижнее подчеркивание */
+  animation-name: move;
+  -webkit-animation-duration: 5s;
+  /* Длительность анимации 300ms 0.3s 3s */
+  animation-duration: 5s;
+  -webkit-animation-timing-function: linear;
+  /* -atf Плавность */
+  animation-timing-function: linear;
+  -webkit-animation-delay: 2s;
+  /* -ad Задержка */
+  animation-delay: 2s;
+  -webkit-animation-iteration-count: 10;
+  /* Количество повторений */
+  -ms-animation-iteration-count: 10;
+  animation-iteration-count: 10;
+}
+@-webkit-keyframes move {
+  /* задаем имя анимации */
+  /* line 873, style.less */
+  from {
+    /* Ключевые кадры анимации. Может быть и 0% */
+    margin-left: 0;
+    border-radius: 50px;
+  }
+  /* line 877, style.less */
+  50% {
+    margin-left: 50px;
+    border-radius: 0;
+  }
+  /* line 882, style.less */
+  to {
+    /* можно поставить и 100% */
+    margin-left: 150px;
+    border-radius: 50px;
+  }
+}
+@keyframes move {
+  /* задаем имя анимации */
+  /* line 873, style.less */
+  from {
+    /* Ключевые кадры анимации. Может быть и 0% */
+    margin-left: 0;
+    border-radius: 50px;
+  }
+  /* line 877, style.less */
+  50% {
+    margin-left: 50px;
+    border-radius: 0;
+  }
+  /* line 882, style.less */
+  to {
+    /* можно поставить и 100% */
+    margin-left: 150px;
+    border-radius: 50px;
+  }
+}
+/* АДАПТАЦИЯ */
+/* Размер col-xs 0-767px На 768 - начинаются перескоки */
+@media (min-width: 0px) and (max-width: 479px) {
+  /* line 898, style.less */
+  .main-text h1 {
+    font-size: 34px
+    /* !important  */
+    /* !important - повышает приоритет стиля. Применять в случае, если мы не можем указать правильный путь. Но, здесь есть проблема - чем больше мы используем important, тем больше запутываемся в приоритетах  */
+  }
+  /* line 905, style.less */
+  .img-responsive {
+    margin-left: 20%;
+  }
+  /* line 910, style.less */
+  .section-header h2 {
+    font-size: 25px;
+  }
+}
+/* line 917, style.less */
+.process-box {
+  margin-top: 75px;
+}
+/*.slick-dots {
+	align-items: center;
+}*/
+@media (min-width: 480px) and (max-width: 767px) {
+  /* телефоны */
+  /* line 928, style.less */
+  .process-box {
+    margin-top: 75px;
+  }
+  /* line 933, style.less */
+  .img-responsive {
+    margin-left: 50%;
+  }
+}
+/* Размер col-sm */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* планшеты */
+  /* line 941, style.less */
+  .process-btn {
+    font-size: 15px;
+  }
+  /* line 944, style.less */
+  .process-box {
+    margin-top: 75px;
+  }
+  /* line 948, style.less */
+  .works-box {
+    height: 220px;
+  }
+  /* line 952, style.less */
+  .img-responsive {
+    margin-left: 50%;
+  }
+}
+/* Размер col-md */
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* ноутбуки и малые настольные */
+  /* line 959, style.less */
+  .works-box {
+    height: 294px;
+  }
+  /* line 964, style.less */
+  .process-btn {
+    font-size: 15px;
+  }
+  /* line 969, style.less */
+  .img-responsive {
+    margin-left: 50%;
+  }
+}
+/* Размер col-lg */
+@media (min-width: 1200px) and (max-width: 1600px) {
+  /* большие настольные */
+}
+@media (min-width: 1601px) {
+  /* (Без конечной точки) Плазмы */
+}
