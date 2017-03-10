@@ -1,0 +1,1065 @@
+@import "elements.less";
+
+/*Файлы со шрифтами*/
+.opn-thin {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+}
+
+.opn-reg {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+}
+
+.opn-bold {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+}
+/*Основные цвета*/
+@base-black: #706b73;
+@base-red: #fc7254;
+@white: #fff;
+@base-text: #6e6e6e;
+@bg-gray: #f5f5f5;
+@bg-tomi: #4eb2f7;
+@bg-koimona: #c049f8;
+@bg-koire: #817eff;
+@bg-lara: #f74770;
+@bg-services-list: #fbfbfb;
+@yellow: #ffef3b;
+@grey: #adadad;
+@bg-footer: #f7f7f7;
+
+
+/*Базовые настройки*/
+
+body {
+	font-size: 14px;
+	.opn-reg;
+	color: @base-text;
+	background-color: #fff;
+}
+
+
+input, button, textarea {
+	&:focus {
+	outline: none; // Отменяет подсветку окон и кнопок при выделении
+	}
+}
+
+/* Настройки для всех секций */
+section {
+	padding-top: 10%;
+	padding-bottom: 5%;
+}
+
+.section-header {
+	margin-bottom: 7%;
+	h2 {
+		font-size: 50px;
+		.opn-bold;
+		span {
+			color: @base-red;
+		}
+	}
+	p {
+		font-size: 16px;
+	}
+}
+
+/*Главный экран*/
+header {
+	background: @bg-gray url(../img/bg-lesson_13.jpg) no-repeat center center;
+	background-size: cover; // Фон заполняет все пространство шапки
+	min-height: 750px;
+	height: 100vh;
+}
+
+.main { 
+	&-head {
+		margin-top: 3%;
+	}
+	&-logo-border {
+		text-align: center;
+		width: 155px;
+		height: 55px;
+		border: 3px solid @base-black;
+		line-height: 45px;
+		p {
+			.opn-bold;
+			font-size: 40px;
+			color: @base-black;
+			span {
+			color: lighten(@base-red, 5%);
+			}
+		}
+	}
+
+	&-text {
+		margin-top: 2%;
+		text-align: center; 
+		h1 {
+			font-size: 50px;
+			.opn-bold;
+			span {
+				color: @base-red;
+			}
+		}
+		p {
+			font-size: 16px;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+
+	&-navbar {
+		// text-align: center;
+		width: 55px;
+		position: relative;
+		float: right;
+		height: 50px;
+		// margin-top: 15px;
+	}
+	&-form {
+		margin-top: 7%;
+		padding: 20px 35px;
+		background-color: @white;
+		/*Тень объекта на фоне (-bxsh)*/
+		-webkit-box-shadow: 0px 0px 57px 0px rgba(20, 20, 21, 0.2);; 
+		box-shadow: 0px 0px 57px 0px rgba(20, 20, 21, 0.2);
+		-webkit-border-radius: 2px;
+		-moz-border-radius: 2px;
+		-ms-border-radius: 2px;
+		-o-border-radius: 2px;
+		border-radius: 2px;
+		&-header {
+			text-align: center;
+			font-size: 20px;
+			line-height: 50px;
+			.opn-reg;
+			span {
+				color: @base-red;
+			}
+		}
+		&-btn {
+			background-color: @base-red;
+			border: none;
+			padding: 15px 35px;
+			color: @white;
+			font-size: 16px;
+			display:block;
+			margin: 0 auto; //m0-auto - сверху и снизу марджин 0, по сторонам - автоматическое выравнивание по центру. Это подходит только для элементов, которые имеют пареметр display:block; Это позволяет выровнять элемент по центру, если он не текстовы. Для задания отсутупов снизу-сверху, просто отдельно затем прописываем
+			margin-top: 20px;
+
+			-webkit-border-radius: 50px;
+			-moz-border-radius: 50px;
+			-ms-border-radius: 50px;
+			-o-border-radius: 50px;
+			border-radius: 50px;
+			span { /* Стрелка на кнопке */
+				font-size: 15px;
+			}
+			&:hover { /* Появление тени при наведении */
+			-webkit-box-shadow: 0px 0px 20px 0px rgba(20, 20, 21, 0.21);
+			box-shadow: 0px 0px 20px 0px rgba(20, 20, 21, 0.21);
+			}
+		}
+		input, textarea {
+			width: 100%;
+			border: none;
+			border-bottom: 1px solid lighten(@base-text, 40%);
+			margin-top: 35px;
+			
+		}
+	}
+}	
+	
+
+		// Кнопка рскрытия всплывающего меню "Гамбургер"
+.line {
+	width: 30px;
+	height: 4px;
+	background-color: @base-black;
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	-webkit-1: translateY(0px);
+	-ms-transform: translateY(0px);
+	-o-transform: translateY(0px);
+	transform: translateY(0px);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;	
+	/* добавляем плавности line для анимации ниже -trs */
+	-webkit-transition: transform 0.4s;
+	-o-transition: transform 0.4s;
+	transition: transform 0.4s;
+	&:before, &:after {
+		background-color: @base-black;
+		display: inline-block;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		content: '';
+		width: 30px;
+		height: 4px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-ms-border-radius: 5px;
+		-o-border-radius: 5px;
+		border-radius: 5px;	
+		/* добавляем плавности псевдоэлементам для анимации ниже -trs */
+		-webkit-transition: all 0.4s;
+		-o-transition: all 0.4s;
+		transition: all 0.4s;
+	}
+	&:before {
+		--webkit-transform: translateY(-8px);
+		-ms-transform: translateY(-8px);
+		-o-transform: translateY(-8px);
+		transform: translateY(-8px);
+		}
+	&:after {
+		--webkit-transform: translateY(4px);
+		-ms-transform: translateY(4px);
+		-o-transform: translateY(4px);
+		transform: translateY(4px);
+	}
+}
+
+/* Анимируем "Гамбургер" */
+
+.main-navbar:hover {
+	.line {
+		-webkit-transform: rotate(180deg);
+		-ms-transform: rotate(180deg);
+		-o-transform: rotate(180deg);
+		transform: rotate(180deg);
+		height: 0;
+		&:before {
+			-webkit-transform: rotate(-45deg);
+			-ms-transform: rotate(-45deg);
+			-o-transform: rotate(-45deg);
+			transform: rotate(-45deg); 
+		}
+		&:after {
+			-webkit-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			-o-transform: rotate(45deg);
+			transform: rotate(45deg);
+		}
+	}
+}
+
+/* Section Process */
+
+.process {
+	&-box {
+		color: @white;
+		text-align: center;
+		padding: 50px 30px;
+		i.fa {
+			font-size: 50px;
+		}
+		h4 {
+			margin-top: 20px;
+			font-size: 20px;
+			.opn-bold;
+		}
+		p {
+			margin-top: 30px;
+			font-size: 15px;
+		}
+		&:hover { /* Появление тени при наведении */
+			-webkit-box-shadow: 0px 0px 20px 0px rgba(20, 20, 21, 0.21);
+			box-shadow: 0px 0px 20px 0px rgba(20, 20, 21, 0.21);
+		}
+	}
+	&-btn { /*Кнопка формы*/
+		position: absolute; /* для того, чтобы он смог выйти за пределы РЭ*/
+		/*left: 50%;*/
+		margin-left: -40%;
+		margin-top: 22px;
+		bottom: -50;
+		border: none; /*Убираем гаринцы кнопки (bd-n)*/
+		color: @base-black; /*Меняем цвет кнопки на черный*/
+		padding: 15px 30px; /*Стандартные пендинги для кнопок (p15-35)*/
+		width: 80%; /*Ширина копки - 100% от ширины РЭ. Внутренние пэндинги РЭ не дают ей занять все пространство. - это было до absolute */
+		-webkit-border-radius: 50px;
+		-moz-border-radius: 50px;
+		-ms-border-radius: 50px;
+		-o-border-radius: 50px;
+		border-radius: 50px;
+		/*Радиус скругления рамки (-brs)*/
+		background-color: @white;
+		font-size: 16px;
+		/*Тень на фоне (-bxsh)*/
+		&:hover { /* Появление тени при наведении */
+			-webkit-box-shadow: 0px 0px 20px 0px rgba(20, 20, 21, 0.21);
+			box-shadow: 0px 0px 20px 0px rgba(20, 20, 21, 0.21);
+		}
+	}	
+}
+
+.btn-plus { /* Знак "+" на кнопке */ 
+	/*горизонтальная черта*/
+	width: 16px;
+	height: 2px;
+	margin-right: 20px; /* отодвигаем его от кнопки (mr5) */
+	display: inline-block; /*делаем его строчно-блочным*/
+	background-color: @base-black;
+	vertical-align: middle;
+	/* vertical-align - выравнивание двух блочных элементов между собой:
+	- middle - выравнивание посередине (va-m)
+	- top - один сверху, другой посередине (va-t)
+	- text-top - выравнивание текста по высоте и тд. */
+	&:before {
+		/*вертикальная черта*/
+		display: inline-block;
+		content: "";
+		width: 16px;
+		height: 2px;
+		background-color: @base-black;
+		position: absolute;
+		-webkit-transform: rotate(90deg) translateY(8px);
+		-ms-transform: rotate(90deg) translateY(8px);
+		-o-transform: rotate(90deg) translateY(8px);
+		transform: rotate(90deg) translateY(8px);
+		/*Применяем перемещение по поси Y, так как объект овернут на 90гр*/
+
+	}
+}
+
+.box {
+	&-tomi {
+		background-color: @bg-tomi;
+	}
+	&-koimona {
+		background-color: @bg-koimona;
+	}
+	&-koire {
+		background-color: @bg-koire;
+	}
+	&-lara {
+		background-color: @bg-lara;
+	}
+}
+
+i.fa-camera-retro {
+	/* Сокращенная формула для transform с префиксами: -rtf 
+	Для поворота - rotate, "-" - против часовой стрелки*/
+	-webkit-transform: rotate(-20deg);
+	-ms-transform: rotate(-20deg);
+	-o-transform: rotate(-20deg);
+	transform: rotate(-20deg);
+}
+
+/* Works section */
+.works-box {
+	height: 360px;
+	position: relative; /* (ps-r)  relative для того, чтобы элементы, которые имеют position: absolute внутри works-box, выравнивались относительно works-box, а не других элементов, которые имеют position:relative. */
+	img {
+		width: 100%;
+	}
+}
+.signature {
+	opacity: 0; /* нерпозрачность. шкала 0-1. 0.25 - 25% */
+	position: absolute; /* Делаем "абсолют", чтобы выравнивание подписи было отностительно РЭ*/
+	/*Далее прилепляем к левому верхнему краю РЭ*/
+	top: 0px;
+	left: 0px; 
+	width: 100%; /* Ширина 100% от РЭ*/
+	height: 100%; /* Высота 100% от РЭ*/
+	background-color: rgba(0,0,0,0.6); /* Заливка - Черный цвет с прозачностью 50% - эффект при наведении*/
+	color: @white; /*Цвет текста в блоке*/
+	text-align: center;
+	/* Делаем флекс-бокс для выравнивания элементов в блоке. (d--f) Удаляем лишние префиксы moz ms o  */
+	display: -webkit-flex;
+	display: flex;
+	justify-content: center; /* Выравниваем все по центру горизонтали */
+	align-items: center; /* Выравниваем все по центру вертикали */
+	/* Далее делаем выравнивение для -webkit- но уже руками. Копируем и подставляем */
+	-webkit-justify-content: center; 
+	-webkit-align-items: center; 
+	/* Теперь наш контент будет всегда ровно посередине. */
+	/* Далее делаем смену непрозрачности более плавной с помощью transition (-trs)*/
+	-webkit-transition: opacity 0.5s;
+	-o-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+	/* 0.5 - скрость изменения прозрачности для opasiti. all - для всех элементов. Допустим, если бы что-то менялось (высота, ширина). */
+
+	&:hover { /* Это псевдо-класс hover */
+		opacity: 1; /* делаем элемент прозрачным */
+	}
+}
+
+.sign {
+	p {
+		.opn-bold;
+		font-size: 22px;
+	}
+	button {
+		border: none;
+		padding: 15px 35px;
+		/* Радиус скругления рамки (-brs) */
+		-webkit-border-radius: 50px;
+		-moz-border-radius: 50px;
+		-ms-border-radius: 50px;
+		-o-border-radius: 50px;
+		border-radius: 50px;
+		background-color: @base-red;
+	}
+	/* Далее, наша задача - сделать так, чтобы подпись появлялась при наведении. */
+}
+
+.works-row {
+	margin-top: 3%;
+}
+
+
+
+/* Services section Блок с ветикальными иконками */
+
+.services {
+	&-list {
+		text-align: center;
+		list-style: none; /* (lsn) Отменяет маркировку списка */
+			&-item {
+			display:inline-block; /* (dpb) Элементы в списке будут блочными и будут занимать всю строку, таким образом становиться друг под другом образуя колонку. 
+			Далее делаем квадрат. */
+			width: 100px;
+			height: 100px;
+			text-align: center; /* Здесь иконки выравниваем по центру их блока. img является строчным элементом и он будет вести себя как текст. */
+			padding-top: 25px;
+			padding-left: 18px;
+			margin: 5px 5px; /* (mg5-a) сам блок с иконками также выравниваем по центру - сверху и снизу по 5рх, по краям - автомат. */
+			background-color: @bg-services-list;
+			&:hover { /* Появление тени при наведении */
+			-webkit-box-shadow: 0px 0px 20px 0px rgba(20, 20, 21, 0.21);
+			box-shadow: 0px 0px 20px 0px rgba(20, 20, 21, 0.21);
+			}
+		}
+	}
+
+	&-info {
+		h4 {
+			font-size: 30px;
+		}
+		p {
+			font-size: 16px;
+		}
+	}
+	&-line {
+		margin-top: 10px;
+		width: 60px;
+		height: 4px;
+		background-color: @base-red;
+		display: inline-block;
+		margin-bottom: 10px;
+	}
+	&-btn {
+		margin-top: 22px;
+		border: 1px solid lighten(@base-black, 30%);
+		color: @base-black; /*Меняем цвет кнопки на черный*/
+		padding: 15px 45px; /*Стандартные пендинги для кнопок (p15-35)*/
+		-webkit-border-radius: 50px;
+		-moz-border-radius: 50px;
+		-ms-border-radius: 50px;
+		-o-border-radius: 50px;
+		border-radius: 50px;
+		/*Радиус скругления рамки (-brs)*/
+		background-color: @white;
+		font-size: 16px;
+		/*Тень на фоне (-bxsh)*/
+		&:hover { /* Появление тени при наведении */
+			-webkit-box-shadow: 0px 0px 20px 0px rgba(20, 20, 21, 0.21);
+			box-shadow: 0px 0px 20px 0px rgba(20, 20, 21, 0.21);
+		}
+	}	
+}
+
+.panel-default>.panel-heading {
+	h4 {
+		color: @base-red;
+		.opn-bold;
+	}
+}
+
+
+/* Секция отзывов */
+
+.feetback {
+	&-box {
+		margin-left: 15px;
+		margin-right: 15px;
+		padding: 10px;
+		/* img {
+			width: 128px;
+			height: 128px;
+			/* Делаем аватарку круглой (-brs50%) Радиус скругления углов рамки*/
+			/*-webkit-border-radius: 50%;
+			-moz-border-radius: 50%;
+			-ms-border-radius: 50%;
+			-o-border-radius: 50%;
+			border-radius: 50%;
+		}
+	
+	Или через стандартный класс Bootstrap img-circle. Просто прописываем этот класс объету */
+		p {
+			font-size: 17px;
+			margin-top: 20px;
+			margin-bottom: 25px;
+			padding-left: 30px;
+			padding-right: 30px;
+			span {
+				 .opn-bold;
+			}
+		}
+		i.fa-star {
+			color: @yellow;
+		}
+	}
+
+	&-img {
+		margin-bottom: -64px;
+	}
+
+	&-shadow {
+		padding: 64px;
+		box-shadow: 0px 0px 27px 0px rgba(20, 20, 21, 0.07);
+	}
+	/* Кнопки слайдера */
+	&-slider-arrows {
+		position: absolute;
+		top: 50%; /* для стрелок слайдера отступ сверху на 50% от РЭ */
+		height: 57px;
+		width: 57px;
+		font-size: 20px;
+		 z-index: 1; /* применяется, если один элемент закрывает другой. Они стоят на разных слоях и перекрывают друг друга.  В данном случае, левая стрелка не работала по этой причине. 999 - выстскиваем элемент на верх. -999 - опускаем его на нижний слой. */
+		/* возвращаем вверх на половину их высоты */
+		-webkit-transform: translateY (-9px);
+		-ms-transform: translateY (-9px);
+		-o-transform: translateY (-9px);
+		transform: translateY (-9px);
+		box-shadow: 0px 3px 14px 0px rgba(20, 20, 21, 0.28);
+		padding: 20px;
+		-webkit-border-radius: 50px;
+		-moz-border-radius: 50px;
+		-ms-border-radius: 50px;
+		-o-border-radius: 50px;
+		border-radius: 50px;
+		background-color: @white;
+		/* Оформляем кнопки слайдера "при наведении" */
+		&:hover {
+			background-color: @base-red;
+			color: @white;
+			cursor: pointer; /* при наведении курсор превращается в руку */
+		}
+	}
+}
+
+.slick-active {
+	outline: none;
+}
+/* Нашли в панели разработчика элемент, отвечаютщи за обводку блока. Отменяем обводку */
+
+.arrow-left {
+	left: 0;
+}
+
+.arrow-right {
+	right: 0;
+	padding-left: 25px;
+}
+/* Точки прокрутки снизу слайдера */
+.slick-dots li button:before {
+	width: 21px;
+	height: 7px;
+	color: transparent;
+	margin-top: 40px;
+	background-color: @grey;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.slick-dots li.slick-active button:before {
+	color: transparent;
+	background-color: @base-red;
+}
+
+.slick-dots {
+	bottom: -50;
+}
+
+
+/* Feedback-section Слайдер Bootstrep*/
+.fb {
+	&-img {
+
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+.h3-bootstrap {
+	font-size: 20px;
+	.opn-bold;
+	span {
+		color: @base-red;
+	}	
+}
+
+.h3-Photorama {
+	font-size: 20px;
+	.opn-bold;
+	span {
+		color: @base-red;
+	}	
+}
+
+.carousel-control.right, .carousel-control.left {
+	color: @base-red; /* Цвет стрелок. Они шрифтовые, поэтому можно задать цвет. Они слегка прозачны, а при наведении становятся четкими.*/
+	opacity: 1; /* Убираем непрозрачность. Стрелки всегда четкие. */
+	background: none;
+	z-index: 1;
+}
+
+.carousel-indicators .active {
+	background-color: @base-red;
+	/* цвет индикаторов перелистывания */
+}
+
+/* Footer */
+
+footer {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: @bg-footer;
+}
+
+.footer {
+	&-btn {
+	background-color: @white;
+	color: @base-black;
+	font-size: 16px;
+	border: none;
+	padding: 15px 80px;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	-ms-border-radius: 50px;
+	-o-border-radius: 50px;
+	border-radius: 50px;
+		&:hover {
+		box-shadow: 0px 11px 20px 0px rgba(20, 20, 21, 0.07);
+		}
+	}
+}
+
+
+
+/* Modals / Всплывающие окна */
+/* Модальное (всплывающее) окно без JavaScript */
+.popup {
+	width: 400px;
+	height: 400px;
+	background-color: @white;
+	position: fixed;
+	top: 10%;
+	left: 50%;
+	margin-left: -200px; /* Отодвигаем на половину его ширины, чтобы разместить по центур экрана */
+	&-overlay {
+		display: none; /* (d-n) По умолчанию его не будет видно */
+		opacity: 0; /* скрываем это окно */
+		position: fixed; /* Фиксируем затемненную подложку (pf) */
+		width: 100%;
+		height: 100vh; /* Высота на всю высоту экрана */
+		background-color: rgba(0,0,0,.7); /* Цвет черный с прозрачностью 0.5 */
+		/* Привязываем к верху и к левому краю экрана */
+		top: 0;
+		left: 0;
+		z-index: 99; /* Вытаскиваем его на верхный слой поверх остальнрых элементов */
+
+		/* Когда мы обращаемся к диву с id="popup-1", это его состояние в режиме target, поэтому для overlay мы накладываем  псевдо-класс target*/
+		&:target { /* Работает не во всех браузерах */
+			display: block;
+			opacity: 1;
+		}
+
+	}
+	&-close { /* Оформляем крестик зкрытия окна popup */
+		font-size: 30px;
+		color: @base-black;
+		/* Задаем позицию absolute и привязываем к правому верхнему углу */
+		position: absolute; /* ps-a */
+		top: -35px;
+		right: -20px;
+		/* Для модильных версий положение крестика
+		top: 0px;
+		right: 10px;
+		*/
+		/* Далее перечисляем все псевдоклассы, когда мы на ссылку наводим, кликаем, посетили и когда она активна */
+		&:hover, &:focus, &:visited, &:active {
+			/* Во всех этих состояниях убираем у крестика значек подчеркивания, так как это ссылка */
+			text-decoration: none; /* td */
+			color: @base-black;
+		}
+		&:hover {
+			opacity: .7; /* (op.7) При наведении на кнопку ее непрозрачность уменьшается */
+		}
+	}
+}
+
+
+
+
+/* Всплывающее окно на SVG-графике */
+
+
+svg {
+  max-width: 100%;
+}
+
+/* -------------------------------- 
+
+Modal Window
+
+-------------------------------- */
+.cd-modal {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+  -webkit-transition: visibility 0s 0.6s;
+  -moz-transition: visibility 0s 0.6s;
+  transition: visibility 0s 0.6s;
+  z-index: 99;
+}
+.cd-modal svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.cd-modal svg > path {
+  fill: #1f4c74;
+}
+.cd-modal .modal-close {
+  /* 'X' icon */
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  right: 5%;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3) url(../img/cd-icon-close.svg) no-repeat center center;
+  /* image replacement */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  /* Force hardware acceleration*/
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: -webkit-transform 0.3s 0s, visibility 0s 0.3s, opacity 0.3s 0s;
+  -moz-transition: -moz-transform 0.3s 0s, visibility 0s 0.3s, opacity 0.3s 0s;
+  transition: transform 0.3s 0s, visibility 0s 0.3s, opacity 0.3s 0s;
+}
+.no-touch .cd-modal .modal-close:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.cd-modal.modal-is-visible {
+  visibility: visible;
+  -webkit-transition: visibility 0s 0s;
+  -moz-transition: visibility 0s 0s;
+  transition: visibility 0s 0s;
+}
+.cd-modal.modal-is-visible .modal-close {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: -webkit-transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s;
+  -moz-transition: -moz-transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s;
+  transition: transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+
+.cd-modal-content {
+  position: relative;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 3em 5% 4em;
+  opacity: 0;
+  -webkit-transform: translateY(50px);
+  -moz-transform: translateY(50px);
+  -ms-transform: translateY(50px);
+  -o-transform: translateY(50px);
+  transform: translateY(50px);
+  -webkit-transition: opacity 0.3s 0s, -webkit-transform 0.3s 0s;
+  -moz-transition: opacity 0.3s 0s, -moz-transform 0.3s 0s;
+  transition: opacity 0.3s 0s, transform 0.3s 0s;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.cd-modal-content p {
+  color: #f2f2f2;
+  line-height: 1.6;
+  margin: 2em 0;
+}
+.modal-is-visible .cd-modal-content {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-overflow-scrolling: touch;
+  -webkit-transition: opacity 0.3s 0.3s, -webkit-transform 0.3s 0.3s;
+  -moz-transition: opacity 0.3s 0.3s, -moz-transform 0.3s 0.3s;
+  transition: opacity 0.3s 0.3s, transform 0.3s 0.3s;
+}
+@media only screen and (min-width: 768px) {
+  .cd-modal-content {
+    padding: 3em 10% 4em;
+  }
+  .cd-modal-content p {
+    font-size: 2.4rem;
+  }
+}
+
+/* -------------------------------- 
+	Стили всплывающего окна (подправлять здесь)
+ Cover Layer - hide main content when modal is fired
+
+-------------------------------- */
+.cd-cover-layer {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #f2f2f2;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s 0.3s, visibility 0s 0.6s;
+  -moz-transition: opacity 0.3s 0.3s, visibility 0s 0.6s;
+  transition: opacity 0.3s 0.3s, visibility 0s 0.6s;
+}
+.cd-cover-layer.modal-is-visible {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0s; /* -trs */
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
+  transition: opacity 0.3s 0s, visibility 0s 0s;
+}
+
+
+/* Анимация */
+
+.box {
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	-webkit-animation-name: move; /* (-an) Имя анимации пробелами не заделять. Лучше слитно или через нижнее подчеркивание */
+	-o-animation-name: move;
+	animation-name: move;
+	-webkit-animation-duration: 5s; /* Длительность анимации 300ms 0.3s 3s */
+	-o-animation-duration: 5s;
+	animation-duration: 5s;
+	-webkit-animation-timing-function: linear; /* -atf Плавность */
+	-o-animation-timing-function: linear;
+	animation-timing-function: linear;
+	-webkit-animation-delay: 2s; /* -ad Задержка */
+	-o-animation-delay: 2s;
+	animation-delay: 2s;
+	-webkit-animation-iteration-count: 10; /* Количество повторений */
+	-moz-animation-iteration-count: 10;
+	-ms-animation-iteration-count: 10;
+	-o-animation-iteration-count: 10;
+	animation-iteration-count: 10;
+}
+
+
+@keyframes move { /* задаем имя анимации */
+	from { /* Ключевые кадры анимации. Может быть и 0% */
+		margin-left: 0;
+		border-radius: 50px;
+	}
+	50%	{
+		margin-left: 50px;
+		border-radius: 0;
+	}
+
+	to { /* можно поставить и 100% */
+		margin-left: 150px;
+		border-radius: 50px;
+	}
+}
+
+
+
+
+/* АДАПТАЦИЯ */
+
+
+/* Размер col-xs 0-767px На 768 - начинаются перескоки */
+@media (min-width: 0px) and (max-width: 479px) { 
+	.main {
+		&-text {
+			h1 {
+				font-size: 34px; /* !important  */
+			/* !important - повышает приоритет стиля. Применять в случае, если мы не можем указать правильный путь. Но, здесь есть проблема - чем больше мы используем important, тем больше запутываемся в приоритетах  */
+			}
+		}
+	}
+
+	.img-responsive {
+		margin-left:20%
+	}
+
+	.section-header {
+		h2 {
+			font-size: 25px;
+		}
+	}
+}
+
+.process {
+		&-box {
+			margin-top: 75px;
+		}
+	}
+
+/*.slick-dots {
+	align-items: center;
+}*/
+
+@media (min-width: 480px) and (max-width: 767px) { /* телефоны */
+	.process {
+		&-box {
+			margin-top: 75px;
+		}
+	}
+
+	.img-responsive {
+		margin-left:50%
+	}
+
+} 
+/* Размер col-sm */
+@media (min-width: 768px) and (max-width: 991px) {  /* планшеты */
+	.process {
+		&-btn {
+			font-size: 15px;
+		}
+		&-box {
+			margin-top: 75px;
+		}
+	}
+	.works-box {
+		height: 220px;
+	}
+
+	.img-responsive {
+		margin-left:50%
+	}
+}
+
+/* Размер col-md */
+@media (min-width: 992px) and (max-width: 1199px) { /* ноутбуки и малые настольные */
+	.works-box {
+		height: 294px;
+	}
+	
+	.process {
+		&-btn {
+			font-size: 15px;
+		}
+	}
+
+	.img-responsive {
+		margin-left:50%
+	}
+}
+
+/* Размер col-lg */
+@media (min-width: 1200px) and (max-width: 1600px) { /* большие настольные */
+	
+}
+
+@media (min-width: 1601px)  { /* (Без конечной точки) Плазмы */
+
+}
+
+
+
+
+/* Появление меню Гамбургера */
+.overlay-nav {
+	display: none; // по умолчанию затемнение скрыто
+	/* делаем затемненние */
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	left: 0;
+	top: 0;
+	background-color: rgba(0,0,0,0.8);
+	/* подчищаем стили */
+	ul {
+		list-style: none; // удаляем все стили меню, если они есть (lisn)
+		text-align: center;
+		padding-top:10%; // отступ сверху
+		line-height: 2.5; // расстояние между строками
+		li a {
+			-webkit-transition: all 0.4s; // плавная смена цвета
+			-o-transition: all 0.4s;
+			transition: all 0.4s;
+			&:hover { // при наведении на пункты меню
+				text-decoration: none; // удаляем подчеркивания
+				color: @base-red;
+				
+			}
+			color: #fff;
+			font-size: 36px;
+			.opn-bold;
+
+		}
+	}
+}
+/* Кнопка закрытия всплывающего меню */
+.close-nav {
+	position: fixed;
+	font-size: 50px;
+	top: 5%;
+	right: 5%;
+	color: #fff;
+	/* при наведении на кнопку, появляется курсор-поинтер(рука) */
+	&:hover {
+	cursor: pointer;
+	}
+}
+
+
